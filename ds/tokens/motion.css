@@ -1,0 +1,20 @@
+:root{
+--dur-instant:90ms;/* @kind other */
+--dur-fast:160ms;/* @kind other */
+--dur-base:240ms;/* @kind other */
+--dur-slow:420ms;/* @kind other */
+--dur-ripple:720ms;/* @kind other */
+--dur-tide:1600ms;/* @kind other */
+--ease-out:cubic-bezier(.16,1,.3,1); /* @kind other */
+--ease-in-out:cubic-bezier(.65,0,.35,1);/* @kind other */
+--ease-swell:cubic-bezier(.34,1.24,.64,1); /* @kind other */
+--ease-linear:linear;/* @kind other */
+--t-hover:all var(--dur-fast) var(--ease-out);/* @kind other */
+--t-press:transform var(--dur-instant) var(--ease-out);/* @kind other */
+--t-reveal:opacity var(--dur-slow) var(--ease-out),transform var(--dur-slow) var(--ease-out);/* @kind other */
+}
+@keyframes noah-ripple{0%{transform:scale(.6);opacity:.5}100%{transform:scale(2.4);opacity:0}}
+@keyframes noah-halo{0%,100%{transform:scale(1);opacity:.35}50%{transform:scale(1.06);opacity:.6}}
+@keyframes noah-wave-drift{0%{background-position-x:0}100%{background-position-x:-1200px}}
+@keyframes noah-rise{0%{opacity:0;transform:translateY(16px)}100%{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

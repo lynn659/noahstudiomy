@@ -1,0 +1,21 @@
+:root{
+/* 4px base scale */
+--sp-0:0; /* @kind spacing */
+--sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;--sp-10:40px;--sp-12:48px;--sp-16:64px;--sp-20:80px;--sp-24:96px;--sp-32:128px;--sp-40:160px;
+
+/* semantic rhythm */
+--gap-inline:var(--sp-3);
+--gap-stack:var(--sp-4);
+--pad-card:var(--sp-6);
+--pad-card-lg:var(--sp-8);
+--section-y:var(--sp-24);
+--section-y-tight:var(--sp-16);
+
+/* layout */
+--container:1200px;
+--container-narrow:760px;
+--gutter:24px;
+--gutter-lg:40px;
+--grid-cols:12;/* @kind other */
+--nav-h:72px;
+}

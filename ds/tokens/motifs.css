@@ -1,0 +1,29 @@
+/* Brand motifs: 涟漪 ripple / concentric circles / halo rings / wave lines.
+   All generated from tokens — no image assets required. */
+:root{
+--wave-stroke:var(--noah-blue-tint-24);
+--ring-stroke:var(--noah-blue-tint-12);
+}
+
+/* Concentric ripple: a positioned element with expanding ring pseudo-layers */
+.noah-ripple{position:relative;isolation:isolate}
+.noah-ripple::before,.noah-ripple::after{content:"";position:absolute;inset:0;border-radius:var(--r-circle);border:1.5px solid var(--noah-blue);opacity:0;pointer-events:none;z-index:-1}
+.noah-ripple:hover::before{animation:noah-ripple var(--dur-ripple) var(--ease-out) forwards}
+.noah-ripple:hover::after{animation:noah-ripple var(--dur-ripple) var(--ease-out) 140ms forwards}
+
+/* Static concentric-circle graphic (halo rings) */
+.noah-rings{background-image:radial-gradient(circle,transparent 0 22%,var(--ring-stroke) 22% 22.4%,transparent 22.4% 38%,var(--ring-stroke) 38% 38.4%,transparent 38.4% 56%,var(--ring-stroke) 56% 56.4%,transparent 56.4% 76%,var(--ring-stroke) 76% 76.4%,transparent 76.4%)}
+
+/* Halo glow behind hero art / avatars */
+.noah-halo{position:relative}
+.noah-halo::before{content:"";position:absolute;inset:-18%;border-radius:var(--r-circle);background:radial-gradient(circle,var(--noah-blue-tint-12) 0 45%,transparent 70%);animation:noah-halo var(--dur-tide) var(--ease-in-out) infinite;z-index:-1}
+
+/* Wave rule — a thin repeating sine line used as a divider */
+.noah-wave-rule{height:12px;background-repeat:repeat-x;background-size:120px 12px;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'%3E%3Cpath d='M0 6 Q15 0 30 6 T60 6 T90 6 T120 6' fill='none' stroke='%231464F0' stroke-opacity='.35' stroke-width='1.5'/%3E%3C/svg%3E")}
+.noah-wave-rule--drift{animation:noah-wave-drift 24s linear infinite}
+
+/* Flood fill: hover state that rises from the bottom edge */
+.noah-flood{position:relative;overflow:hidden;isolation:isolate}
+.noah-flood>*{position:relative;z-index:1}
+.noah-flood::after{content:"";position:absolute;left:0;right:0;bottom:0;height:100%;background:var(--noah-blue);transform:translateY(100%);transition:transform var(--dur-slow) var(--ease-out);z-index:0}
+.noah-flood:hover::after{transform:translateY(0)}

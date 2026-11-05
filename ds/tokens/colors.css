@@ -1,0 +1,66 @@
+:root{
+/* ---- Brand core ---- */
+--noah-blue:#1464F0;            /* signature — RGB 20 100 240 */
+--noah-blue-press:#0C4CC4;
+--noah-blue-deep:#0C4CC4;       /* deepest blue in use — headlines on light */
+--noah-blue-tint-24:rgba(20,100,240,.24);
+--noah-blue-tint-12:rgba(20,100,240,.12);
+--noah-blue-tint-06:rgba(20,100,240,.06);
+--noah-yellow:#FFF145;          /* highlight — RGB 255 241 69 */
+--noah-yellow-deep:#F0DE00;
+--noah-yellow-tint-24:rgba(255,241,69,.24);
+
+/* ---- Blue ramp (ripple / halo steps) — 600 is the darkest blue ---- */
+--blue-50:#EEF4FE;
+--blue-100:#DCE8FD;
+--blue-200:#B8D0FB;
+--blue-300:#8AB2F8;
+--blue-400:#4A8AF4;
+--blue-500:#1464F0;
+--blue-600:#0C4CC4;
+
+/* ---- Neutrals: light grey + white are the primaries ---- */
+--white:#FFFFFF;
+--grey-25:#FBFBFC;
+--grey-50:#F6F7F9;
+--grey-100:#EFF0F3;
+--grey-200:#E4E6EB;
+--grey-300:#D3D6DD;
+--grey-400:#AFB4BF;
+--grey-500:#858B99;
+--grey-600:#5F6674;
+--grey-700:#414753;
+--grey-800:#282C35;
+--grey-900:#14171D;
+
+/* ---- Semantic ---- */
+--success:#12A56A;
+--warning:#F2A227;
+--danger:#E2453C;
+--info:var(--noah-blue);
+
+/* ---- Semantic aliases: surfaces ---- */
+--surface-page:var(--grey-50);
+--surface-card:var(--white);
+--surface-sunken:var(--grey-100);
+--surface-inverse:var(--blue-600);
+--surface-brand:var(--noah-blue);
+--surface-highlight:var(--noah-yellow);
+--surface-glass:rgba(255,255,255,.72);
+
+/* ---- Semantic aliases: text ---- */
+--text-display:var(--blue-600);
+--text-heading:var(--grey-900);
+--text-body:var(--grey-700);
+--text-muted:var(--grey-500);
+--text-on-brand:var(--white);
+--text-on-highlight:var(--grey-900);
+--text-link:var(--noah-blue);
+--text-link-hover:var(--noah-blue-press);
+
+/* ---- Semantic aliases: lines ---- */
+--border-subtle:var(--grey-200);
+--border-strong:var(--grey-300);
+--border-brand:var(--noah-blue);
+--focus-ring:var(--noah-blue-tint-24);
+}
